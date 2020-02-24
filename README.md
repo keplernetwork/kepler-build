@@ -1,7 +1,7 @@
 # Docker Image For Building Kepler
 
 ```
-docker build -t keplerbuild:rust1.39 -f Dockerfile.build .
+docker build -t keplerbuild:rust1.39 -f Dockerfile .
 ```
 
 Go to kepler repo, and build into bash:
