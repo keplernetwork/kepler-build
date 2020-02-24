@@ -14,7 +14,7 @@ docker run -it --rm \
 Inside the container run cargo build:
 
 ```
-cargo build
+cargo build --release --target-dir target-linux
 ```
 
 ### Building The Docker Image
