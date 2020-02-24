@@ -1,9 +1,5 @@
 # Docker Image For Building Kepler
 
-```
-docker build -t keplerbuild:rust1.39 -f Dockerfile .
-```
-
 Go to kepler repo, and build into bash:
 
 ```
@@ -12,13 +8,20 @@ docker run -it --rm \
   -v $HOME/.cargo/registry/cache:/usr/local/cargo/registry/cache \
   -v $HOME/.cargo/git/db:/usr/local/cargo/git/db \
   -v `pwd`:/project \
-  -w /project keplerbuild:rust1.39 bash
+  -w /project tychobrache/keplerbuild:rust1.39 bash
 ```
 
 Inside the container run cargo build:
 
 ```
 cargo build
+```
+
+### Building The Docker Image
+
+```
+docker build -t tychobrache/keplerbuild:rust1.39 -f Dockerfile .
+docker push tychobrache/keplerbuild:rust1.39
 ```
 
 ### Cargo Caching Note
